@@ -7,8 +7,8 @@ int BinarySearch(int arr[],int n,int key)
    int s=0;
    int e=n;
    
-   while (s<=e)
-   { int mid=(s+e)/2;
+   while (s<=e)           #s=e beacuse to compare two elemnets;
+   { int mid=(s+e)/2;     # it doesnt matter element is in odd or even , in even its take an extra but does same work
      if (key==arr[mid])
         { return mid; }
         
