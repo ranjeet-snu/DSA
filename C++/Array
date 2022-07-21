@@ -1,0 +1,123 @@
+Array ---- Collection of same type of element
+===================================================
+Way of Initilization:
+
+int arr[size];   or int arr[4]={ 1,4,6,7}
+=================================================
+or taking input by user:
+
+Int n;
+cin>>n;
+Int arr[n];
+====================================================
+
+Taking Input through Loop and output Through Loop
+
+
+#include <iostream>
+using namespace std;
+int main() 
+{  int arr[10];
+   for ( int i=0;i<10;i++)
+   {
+       cout<<"Enter Elemenet for index ["<<i<<"] :";
+       cin>>arr[i];
+    }
+   for ( int i=0;i<10;i++)
+   {
+       cout<<"Elemenets Entered by you at each index ["<<i<<"] :"<<arr[i]<<endl;
+    }
+   return 0;
+}
+
+===========================================================
+
+Finding Max and min in Array
+
+
+#include <iostream>
+using namespace std;
+int main() 
+{  int arr[10];
+   for ( int i=0;i<10;i++)
+   {
+       cout<<"Enter Elemenet for index ["<<i<<"] :";
+       cin>>arr[i];
+    }
+    int max_no=arr[0];
+    int min_no=arr[0];
+
+   for ( int i=0;i<10;i++)
+   {
+       if (arr[i]>max_no)
+       { max_no=arr[i];}
+       
+       if (arr[i]<min_no)
+       { min_no=arr[i];}
+       
+    }
+
+cout<<"Max number in Array is"<< max_no<<endl;
+cout<<"Min number in Array is"<< min_no<<endl;
+
+   return 0;
+}
+
+=============================================================
+or 
+
+#include <iostream>
+#include <climits>         ------------------- FOR including INT_MAX and INT_MIN
+using namespace std;
+int main() 
+{  int arr[10];
+   for ( int i=0;i<10;i++)
+   {
+       cout<<"Enter Elemenet for index ["<<i<<"] :";
+       cin>>arr[i];
+    }
+    int max_no=INT_MIN;
+    int min_no=INT_MAX;
+
+   for ( int i=0;i<10;i++)
+   {
+       if (arr[i]>max_no)
+       { max_no=arr[i];}
+       
+       if (arr[i]<min_no)
+       { min_no=arr[i];}
+       
+    }
+
+cout<<"Max number in Array is"<< max_no<<endl;
+cout<<"Min number in Array is"<< min_no<<endl;
+
+   return 0;
+}
+
+
+or    we can do it by using min and max function
+
+#include <iostream>
+#include <climits>
+using namespace std;
+int main() 
+{  int arr[5];
+   for ( int i=0;i<5;i++)
+   {
+       cout<<"Enter Elemenet for index ["<<i<<"] :";
+       cin>>arr[i];
+    }
+    int max_no=INT_MIN;
+    int min_no=INT_MAX;
+
+   for ( int i=0;i<5;i++)
+   {  max_no=max(max_no,arr[i]);
+      min_no=min(min_no,arr[i]);
+    }
+
+cout<<"Max number in Array is: "<< max_no<<endl;
+cout<<"Min number in Array is: "<< min_no<<endl;
+
+   return 0;
+}
