@@ -4,7 +4,7 @@ using namespace std;
 void swapadjacent(int arr[],int n)
 {
     for( int i=0; i<n;i+=2)
-    {if(i+1<n)
+    {if(i+1<n)   //checking wether next element index comes in array or not
     { swap(arr[i],arr[i+1]);}
     }
     
