@@ -2,7 +2,7 @@
 #include <climits>
 using namespace std;
 
-int BinarySearch(int arr[],int n,int key)
+int BinarySearch(int arr[],int n,int key)    // n for size
 {
    int s=0;
    int e=n;
